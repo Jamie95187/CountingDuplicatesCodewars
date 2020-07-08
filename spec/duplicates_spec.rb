@@ -10,6 +10,10 @@ describe 'duplicates' do
       expect(duplicates.count('a')).to eq 0
     end
 
+    it('should return 1') do
+      expect(duplicates.count('aa')).to eq 1
+    end
+
   end
 
 end
