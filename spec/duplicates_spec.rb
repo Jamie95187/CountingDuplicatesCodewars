@@ -7,6 +7,7 @@ describe 'duplicates' do
   describe 'count' do
 
     it('should return 0') do
+      expect(duplicates.count('')).to eq 0
       expect(duplicates.count('a')).to eq 0
     end
 
