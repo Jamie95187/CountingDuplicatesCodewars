@@ -14,6 +14,7 @@ describe 'duplicates' do
       expect(duplicates.count('aa')).to eq 1
       expect(duplicates.count('aaa')).to eq 1
       expect(duplicates.count('bb')).to eq 1
+      expect(duplicates.count('bazcvbb')).to eq 1
     end
 
   end
