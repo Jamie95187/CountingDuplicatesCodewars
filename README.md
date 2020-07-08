@@ -15,3 +15,26 @@ Write a function that will return the count of distinct case-insensitive alphabe
 "Indivisibilities" -> 2 `# 'i' occurs seven times and 's' occurs twice` </br>
 "aA11" -> 2 `# 'a' and '1'` </br>
 "ABBA" -> 2 `# 'A' and 'B' each occur twice` </br>
+
+## Tests
+
+Following the red, green, refactor TDD principle to test drive towards the solution.
+
+```
+it('should return 0') do
+  expect(duplicates.count('')).to eq 0
+  expect(duplicates.count('a')).to eq 0
+end
+
+it('should return 1') do
+  expect(duplicates.count('Aa')).to eq 1
+  expect(duplicates.count('aa')).to eq 1
+  expect(duplicates.count('aaa')).to eq 1
+  expect(duplicates.count('bb')).to eq 1
+  expect(duplicates.count('bazcvbb')).to eq 1
+end
+
+it('should return 2') do
+  expect(duplicates.count('abba')).to eq 2
+end
+```
