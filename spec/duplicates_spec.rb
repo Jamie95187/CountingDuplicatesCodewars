@@ -11,6 +11,7 @@ describe 'duplicates' do
     end
 
     it('should return 1') do
+      expect(duplicates.count('Aa')).to eq 1
       expect(duplicates.count('aa')).to eq 1
       expect(duplicates.count('aaa')).to eq 1
       expect(duplicates.count('bb')).to eq 1
