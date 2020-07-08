@@ -17,6 +17,10 @@ describe 'duplicates' do
       expect(duplicates.count('bazcvbb')).to eq 1
     end
 
+    it('should return 2') do
+      expect(duplicates.count('abba')).to eq 2
+    end
+
   end
 
 end
